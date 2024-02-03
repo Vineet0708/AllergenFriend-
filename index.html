@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergen Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Allergen Detection</h1>
+            <p class="subtitle">Detect allergens in your food</p>
+        </div>
+        <div class="camera-area" id="camera-area">
+            <video id="videoElement" autoplay playsinline></video>
+            <canvas id="canvasElement" style="display:none;"></canvas>
+        </div>
+        <div class="result" id="result"></div>
+        <div class="info-area" id="infoArea" style="display:none;">
+            <h2>Dish Information</h2>
+            <p id="dishName">Name: </p>
+            <p id="allergens">Allergens: </p>
+            <!-- Add more information as needed -->
+        </div>
+        <div class="button-area">
+            <button id="captureButton" onclick="captureImage()">Capture Image</button>
+            <button id="uploadButton" onclick="uploadImage()">Upload Photo</button>
+            <button id="webcamButton" style="display:none;" onclick="showWebcam()">Use Webcam Again</button>
+        </div>
+        <input type="file" id="fileInput" style="display:none;" accept="image/*" onchange="handleFileSelect(event)">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
