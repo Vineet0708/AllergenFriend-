@@ -31,9 +31,20 @@
             <button id="uploadButton" onclick="uploadImage()">Upload Photo</button>
             <button id="webcamButton" style="display:none;" onclick="showWebcam()">Use Webcam Again</button>
         </div>
+        
+        <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />  something here is really wrong someone help
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body>
+        <py-script src="ingredients.py">
+
+        </py-script> -->
+
+
         <input type="file" id="fileInput" style="display:none;" accept="image/*" onchange="handleFileSelect(event)">
     </div>
     <script src="script.js"></script>
     <script src="predict.js"></script>
+    <script type="module" src="predict.js"></script>
 </body>
 </html>
