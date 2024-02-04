@@ -1,8 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #bad9f0;
     margin: 0;
     padding: 0;
+    background-image: url('kitchen.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
 }
 
 .container {
@@ -10,7 +13,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: rgb(255 255 255 / 50%);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -47,20 +50,29 @@ canvas {
     margin-top: 20px; /* Add margin-top to the button area */
 }
 
+/* Add this to your existing CSS styles */
+.logo {
+    position: absolute;
+    right: 370px;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure the logo is above other content */
+}
+
 button {
     padding: 10px 20px;
     font-size: 18px;
     margin: 0 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    background-color: rgb(255 255 255 / 50%);
+    color: #000000;
+    border: 2px solid #333;
     border-radius: 20px; /* Rounded corners */
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #79b5e4;
 }
 
 /* Adjust the dimensions of the uploaded image */

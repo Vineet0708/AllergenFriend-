@@ -1,4 +1,5 @@
-var isCaptured = false; // Track whether an image has been captured
+// Define imageData variable globally
+var imageData;
 
 // Function to capture image from webcam
 function captureImage() {
@@ -10,7 +11,7 @@ function captureImage() {
     canvasElement.getContext('2d').drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
 
     // Convert canvas content to base64 encoded image data
-    var imageData = canvasElement.toDataURL('image/png');
+    imageData = canvasElement.toDataURL('image/png');
 
     // Display captured image
     var img = new Image();
@@ -27,8 +28,6 @@ function captureImage() {
     
     // Show webcam button
     document.getElementById('webcamButton').style.display = 'block';
-    
-    isCaptured = true; // Set flag to indicate image has been captured
 }
 
 // Function to show webcam feed again
@@ -82,3 +81,6 @@ function handleFileSelect(event) {
         reader.readAsDataURL(file);
     }
 }
+
+// Export the imageData variable
+export { imageData };
